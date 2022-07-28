@@ -1,15 +1,22 @@
 require './lib/item'
 
 RSpec.describe Item do
-  it 'exists' do
-    item = Item.new('A')
+  before do
+    @item = Item.new('A', 50)
+  end
 
-    expect(item).to be_an(Item)
+  it 'exists' do
+
+    expect(@item).to be_an(Item)
   end
 
   it 'has a SKU' do
-    item = Item.new('A')
 
-    expect(item.sku).to eq('A')
+    expect(@item.sku).to eq('A')
+  end
+  
+  it 'has a price' do
+    
+    expect(@item.price).to eq(50)
   end
 end

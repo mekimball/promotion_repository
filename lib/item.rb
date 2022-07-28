@@ -1,8 +1,9 @@
 class Item
-  attr_reader :sku
+  attr_reader :sku, :price
 
-  def initialize(sku)
+  def initialize(sku, price)
     @sku = sku
+    @price = price
   end
 
 end
